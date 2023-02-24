@@ -2,7 +2,7 @@ public class Informacao {
 
     private String nomeEstado;
     private float pib;
-    private float soma;
+    /* private float soma = 0; */
     
     public String getNomeEstado() {
         return nomeEstado;
@@ -16,17 +16,17 @@ public class Informacao {
     public void setPib(float pib) {
         this.pib = pib;
     }
-    public float getSoma() {
+    /* public float getSoma() {
         return soma;
     }
     public void setSoma(float soma) {
-        this.soma = soma;
-    }
+        this.soma += soma;
+    } */
     
     @Override
     public String toString() {
         return " Nome do Estado: " + nomeEstado + "\t\t\t - \tPib : " + pib + "\n".replace(",", "\n");
-        /* "Soma: " + (soma += pib) +  */
+    /* + "Soma: " + (soma += pib) */    
     }
 
     public Informacao() {}
