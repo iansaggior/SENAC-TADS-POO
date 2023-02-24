@@ -16,13 +16,11 @@ public class Ado1 {
         /* Abertura de arquivo e loop de leitura */
         /* ------------------------------------- */
 
+        ArrayList<Informacao> estados = new ArrayList<Informacao>();
+        float soma = 0;
         try {
             FileReader leitorDeArquivo = new FileReader(arquivoEntrada);
             BufferedReader bufferDeArquivo = new BufferedReader(leitorDeArquivo);
-
-            List<Informacao> estados = new ArrayList<Informacao>();
-
-            float soma = 0;
 
             while ((linha = bufferDeArquivo.readLine()) != null) {
                 String[] dados = linha.split(";");
@@ -30,26 +28,16 @@ public class Ado1 {
                 Informacao informacao = new Informacao();
                 informacao.setNomeEstado(dados[0]);
                 informacao.setPib(Float.parseFloat(dados[1]));
-                // tentativa de somar todos os pibs para conseguir fazer uma porcentagem
                 soma += informacao.getPib();
-
                 estados.add(informacao);
+
+                /*
+                 * usar os dados ja separados no split, pegando o pib d cada estado e dividir
+                 * com a variavel soma e multiplicar por 100
+                 */
             }
-
-            /*
-             * while (true) {
-             * linha = bufferDeArquivo.readLine();
-             * 
-             * if (linha == null) {
-             * break;
-             * }
-             * System.out.println(linha);
-             * }
-             */
-
             System.out.println(estados);
             System.out.println("Total: " + soma);
-
             bufferDeArquivo.close();
 
         } catch (FileNotFoundException ex) {
@@ -67,12 +55,17 @@ public class Ado1 {
         try {
             FileWriter fileWriter = new FileWriter(arquivoSaida);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+            PrintWriter imprimirArquivo = new PrintWriter(bufferedWriter);
 
             bufferedWriter.write("pib da regiao X = $$$$");
             bufferedWriter.newLine();
             bufferedWriter.write("pib da regiao Y = $$$$");
+            bufferedWriter.newLine();
+            // bufferedWriter.write("Estados: " + estados);
+            imprimirArquivo.append("\nEstados: \n" + estados);
 
             bufferedWriter.close();
+
         } catch (IOException ex) {
             System.out.println("Erro de escrita em '" + arquivoSaida + "'");
         }
