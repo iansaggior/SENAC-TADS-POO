@@ -46,6 +46,13 @@ public class Ado1 {
             System.out.println("Erro lendo o arquivo '" + arquivoEntrada + "'");
         }
         System.out.println();
+       
+         Informacao informacao = new Informacao();
+        for (float porcentagem : (estados)) {
+            porcentagem = (informacao.getPib() / soma) * 100;
+            System.out.println(porcentagem);
+        }
+
 
         /* ------------------------------------- */
         /* Exemplo de escrita em arquivo */
