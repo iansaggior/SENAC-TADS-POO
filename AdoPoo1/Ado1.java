@@ -28,7 +28,8 @@ public class Ado1 {
                 Informacao informacao = new Informacao();
                 informacao.setNomeEstado(dados[0]);
                 informacao.setPib(Float.parseFloat(dados[1]));
-                soma += informacao.getPib();
+                informacao.setSoma(soma += informacao.getPib());                    
+
                 estados.add(informacao);
 
                 /*
