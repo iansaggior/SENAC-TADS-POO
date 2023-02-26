@@ -47,9 +47,8 @@ public class Ado1 {
         }
         System.out.println();
        
-         Informacao informacao = new Informacao();
-        for (float porcentagem : (estados)) {
-            porcentagem = (informacao.getPib() / soma) * 100;
+        for (Informacao i: (estados)) {
+            float porcentagem = (i.getPib() / soma) * 100;
             System.out.println(porcentagem);
         }
 
