@@ -1,8 +1,9 @@
+import java.text.DecimalFormat;
+
 public class Informacao {
 
-    private String nomeEstado;
-    private float pib;
-    /* private float soma = 0; */
+    private String nomeEstado, regiao;
+    private float pib, soma, porcentagem;
     
     public String getNomeEstado() {
         return nomeEstado;
@@ -15,20 +16,34 @@ public class Informacao {
     }
     public void setPib(float pib) {
         this.pib = pib;
-    }
-    /* public float getSoma() {
+    }    
+    public float getSoma() {
         return soma;
     }
     public void setSoma(float soma) {
-        this.soma += soma;
-    } */
+        this.soma = soma;
+    }    
+    public float getPorcentagem() {
+        return porcentagem;
+    }
+    public void setPorcentagem(float porcentagem) {
+        this.porcentagem = porcentagem;
+    }    
+    public String getRegiao() {
+        return regiao;
+    }
+    public void setRegiao(String regiao) {
+        this.regiao = regiao;
+    }
     
     @Override
     public String toString() {
-        return " Nome do Estado: " + nomeEstado + "\t\t\t - \tPib : " + pib + "\n".replace(",", "\n");
-    /* + "Soma: " + (soma += pib) */    
+        DecimalFormat format = new DecimalFormat("##0.000");
+        return "Nome do Estado: " + nomeEstado 
+        + "\nPib: " + pib + " Bilhoes"
+        + "\nPorcentagem: " + format.format(porcentagem) + "%\n";
+        //String.format("%.2f", porcentagem) 
     }
 
     public Informacao() {}
-    
 }
