@@ -13,12 +13,7 @@ public class Ado1 {
         ArrayList <Informacao> estados = new ArrayList <Informacao> ();
         float soma = 0;
         String arquivoEntradaPib = "C:../AdoPoo1/pib.txt";
-        String arquivoEntradaRegioes = "C:../AdoPoo1/regioes.txt";
-        String linha1 = null;
-        ArrayList <Informacao> regioesBrasil = new ArrayList <Informacao> ();
-        String arquivoSaida = "C:../AdoPoo1/saida.txt";
-        String states = estados.toString();
-        
+
 /*      --------------------------------------------    */
 /*      Abertura do arquivo pib.txt e loop de leitura   */
 /*      --------------------------------------------    */
@@ -63,6 +58,10 @@ public class Ado1 {
 /*      Abertura do arquivo regioes.txt e loop de leitura */
 /*      ------------------------------------------------- */
 
+        String arquivoEntradaRegioes = "C:../AdoPoo1/regioes.txt";
+        String linha1 = null;
+        
+        ArrayList <Informacao> regioesBrasil = new ArrayList <Informacao> ();
 
         try {
             FileReader flrd = new FileReader(arquivoEntradaRegioes);
@@ -93,6 +92,8 @@ public class Ado1 {
 /*      Escrita no arquivo .txt                 */
 /*      -------------------------------------   */
 
+        String arquivoSaida = "C:../AdoPoo1/saida.txt";
+        String states = estados.toString();
 
         states = states.replace("[", "");
         states = states.replace("]", "");
