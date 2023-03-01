@@ -40,7 +40,7 @@ public class Informacao {
     public String toString() {
         DecimalFormat format = new DecimalFormat("##0.000");
         return "Nome do Estado: " + nomeEstado 
-        + "\nPib: " + pib + " Bilhoes"
+        + "\nPib: R$ " + pib + " Bilhoes"
         + "\nPorcentagem: " + format.format(porcentagem) + "%\n";
         //String.format("%.2f", porcentagem) 
     }
