@@ -103,7 +103,7 @@ public class Ado1 {
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             PrintWriter escritorDeArquivo = new PrintWriter(bufferedWriter);
             
-                escritorDeArquivo.append("PIB do Brasil: " + soma + " Trilhoes\n");
+                escritorDeArquivo.append("PIB do Brasil: R$ " + soma + " Trilhoes\n");
                 escritorDeArquivo.append("Estados \t - \t PIB \t - \tPorcentagem \n\n" + states);
                 
             bufferedWriter.close();
