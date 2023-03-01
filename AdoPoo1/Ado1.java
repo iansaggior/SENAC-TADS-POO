@@ -95,9 +95,8 @@ public class Ado1 {
         String arquivoSaida = "C:../AdoPoo1/saida.txt";
         String states = estados.toString();
 
-        states = states.replace("[", "");
-        states = states.replace("]", "");
-        states = states.replace(", ", "\n");
+        states = states.replace("[", "").replace("]", "").replace(", ", "\n");
+
         try {
             
             FileWriter fileWriter = new FileWriter(arquivoSaida);
