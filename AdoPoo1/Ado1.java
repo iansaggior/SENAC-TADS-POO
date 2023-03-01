@@ -72,7 +72,7 @@ public class Ado1 {
                 Informacao informacao = new Informacao();
                 //informacao.setRegiao(regiao);
 
-                System.out.print(Arrays.toString(regiao).replace("[]", "\n"));
+                System.out.print(Arrays.toString(regiao).replace("[]", "\n").replace("[", " ").replace("]", " "));
                 regioesBrasil.add(informacao);
             }
             
