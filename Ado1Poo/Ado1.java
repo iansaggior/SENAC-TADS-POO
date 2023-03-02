@@ -13,7 +13,7 @@ public class Ado1 {
         String linha = null;
         ArrayList <Informacao> estados = new ArrayList <Informacao> ();
         float soma = 0;
-        String arquivoEntradaPib = "C:../AdoPoo1/pib.txt";
+        String arquivoEntradaPib = "C:../Ado1Poo/pib.txt";
 
 /*      --------------------------------------------    */
 /*      Abertura do arquivo pib.txt e loop de leitura   */
@@ -28,9 +28,9 @@ public class Ado1 {
                 String [] dados = linha.split(";");
                 Informacao informacao = new Informacao();
 
-                //Extrair os nomes dos .estados
+                //Extrair os nomes dos estados
                 informacao.setNomeEstado(dados[0]);
-                //Extrair os PIBs dos .estados
+                //Extrair os PIBs dos estados
                 informacao.setPib(Float.parseFloat(dados[1]));
                 //Fazer a soma de todos os PIBs
                 informacao.setSoma(soma += informacao.getPib());                    
@@ -59,12 +59,12 @@ public class Ado1 {
 /*      Abertura do arquivo regioes.txt e loop de leitura */
 /*      ------------------------------------------------- */
 
-        String arquivoEntradaRegioes = "C:../AdoPoo1/regioes.txt";
+        String arquivoEntradaRegioes = "C:../Ado1Poo/regioes.txt";
 
         ArrayList <Regiao> regioesDoBrasil = new ArrayList <Regiao> ();
         String nomeRegiao = null;
-        double pibRegiaoPorcentual = 0.0;
-        double pibRegiaoEmDinheiro = 0.0;
+        float pibRegiaoPorcentual = 0;
+        float pibRegiaoEmDinheiro = 0;
         int cont = 0;
 
         try {
@@ -121,7 +121,7 @@ public class Ado1 {
 /*      Escrita no arquivo .txt                 */
 /*      -------------------------------------   */
 
-        String arquivoSaida = "C:../AdoPoo1/saida.txt";
+        String arquivoSaida = "C:../Ado1Poo/saida.txt";
 
         try {
             
@@ -145,7 +145,7 @@ public class Ado1 {
                                 bufferedWriter.newLine();
                             }         
                             escritorDeArquivo.append("PIB " + aux.getRegiao() + ": \t" +
-                            "R$ " + String.format("%.1f",(aux.getPibRegiaoDinheiro())) + " Bi" + " = " + 
+                            "R$ " + (aux.getPibRegiaoDinheiro()) + " Bi" + " = " + 
                             format.format(aux.getPibRegiao()) + "%");
                             verificadorRegiao = true;
                             break;
