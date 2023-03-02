@@ -1,0 +1,36 @@
+Norte
+Rondônia
+Acre
+Amazonas
+Roraima
+Pará
+Amapá
+Tocantins
+
+Nordeste
+Maranhão
+Piauí
+Ceará
+Rio Grande do Norte
+Paraíba
+Pernambuco
+Alagoas
+Sergipe
+Bahia
+
+Sudeste
+Minas Gerais
+Espírito Santo
+Rio de Janeiro
+São Paulo
+
+Sul
+Paraná
+Santa Catarina
+Rio Grande do Sul
+
+Centro-Oeste
+Mato Grosso do Sul
+Mato Grosso 
+Goiás
+Distrito Federal

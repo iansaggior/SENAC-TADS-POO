@@ -1,0 +1,9 @@
+PIB do Brasil: R$ 4132.5 Trilhoes
+
+PIB dos estados em relacao ao PIB do Brasil 
+
+PIB Norte: 	R$ 221,50 Bi = 5,36%
+PIB Nordeste: 	R$ 551,00 Bi = 13,33%
+PIB Sudeste: 	R$ 2294,00 Bi = 55,51%
+PIB Sul: 	R$ 671,00 Bi = 16,24%
+PIB Centro-Oeste: 	R$ 324,00 Bi = 7,84%
