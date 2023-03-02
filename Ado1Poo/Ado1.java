@@ -145,7 +145,7 @@ public class Ado1 {
                                 bufferedWriter.newLine();
                             }         
                             escritorDeArquivo.append("PIB " + aux.getRegiao() + ": \t" +
-                            "R$ " + String.format("%.2f",(aux.getPibRegiaoDinheiro())) + " Bi" + " = " + 
+                            "R$ " + String.format("%.1f",(aux.getPibRegiaoDinheiro())) + " Bi" + " = " + 
                             format.format(aux.getPibRegiao()) + "%");
                             verificadorRegiao = true;
                             break;
